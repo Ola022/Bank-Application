@@ -6,12 +6,16 @@ def logs_in():
     """
     Accept user Phone and Password to valid the user
     :return: User info is returned
+
+    Some user acc:
+    phone: "1234", 09012341234
+    pass: 1111
     """
     count = 0
     while count < 3:
         count += 1
-        phone_number = input("Enter your Phone Number here: ") #"1234"
-        password = input("Enter your Password here: ")  #"1111"
+        phone_number = input("Enter your Phone Number here: ")
+        password = input("Enter your Password here: ")
         if phone_number != "" and password is not None:
             print("*"*14, colour_print(f"Processing!, Please wait", YELLOW), "*"*14)
             user_info = UserController().login(phone_number, password)
